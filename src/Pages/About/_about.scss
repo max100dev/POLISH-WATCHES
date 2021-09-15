@@ -1,0 +1,93 @@
+.about-page {
+  @include flex-layout(center, center, row);
+  width: 45%;
+  height: 100%;
+  margin: auto;
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5 {
+    color: var(--header-light);
+  }
+}
+
+.left-section,
+.right-section {
+  margin-top: 9em;
+  margin-bottom: 3em;
+}
+
+.left-section {
+  img {
+    height: 20em;
+  }
+}
+
+.right-section {
+  margin-left: 3em;
+  &-description {
+    font-weight: 400;
+  }
+}
+
+// Desktop
+
+@media (max-width: 1788px) {
+  .about-page {
+    width: 60%;
+  }
+}
+
+@media (max-width: 1440px) {
+  .about-page {
+    width: 75%;
+  }
+
+  .left-section {
+    img {
+      height: 18em;
+    }
+  }
+}
+
+@media (max-width: 1100px) {
+  .about-page {
+    width: 90%;
+  }
+}
+
+// Tablet and lower screens
+
+@media (max-width: 858px) {
+  .about-page {
+    @include flex-layout(center, center, column);
+  }
+
+  .right-section {
+    margin: 1em 0;
+  }
+
+  .left-section {
+    margin-top: 3.4em;
+    margin-bottom: 0;
+    img {
+      height: 15em;
+    }
+  }
+}
+
+// Mobile
+
+@media (max-width: 620px) {
+  .right-section {
+    &-title {
+      font-size: 1.35rem;
+    }
+    &-description {
+      font-size: 1.1rem;
+      text-align: center;
+    }
+  }
+}

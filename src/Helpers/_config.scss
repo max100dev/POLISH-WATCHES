@@ -1,0 +1,20 @@
+body {
+  background-color: var(--header-background);
+}
+
+.container {
+  overflow-x: hidden;
+}
+
+.link {
+  text-decoration: none;
+  &-nav {
+    display: flex;
+    align-items: center;
+    h2 {
+      color: var(--header-light);
+      font-size: 1rem;
+      font-weight: 300;
+    }
+  }
+}

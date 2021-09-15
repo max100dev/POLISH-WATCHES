@@ -1,0 +1,20 @@
+@mixin flex-layout($justify, $align, $direction) {
+  display: flex;
+  justify-content: $justify;
+  align-items: $align;
+  flex-direction: $direction;
+}
+
+@mixin page-arrows($direction) {
+  @include flex-layout(center, center, row);
+  width: 100%;
+  height: 100%;
+  content: $direction;
+  color: var(--header-light);
+}
+
+:root {
+  --header-light: #eeeeee;
+  --header-background: #222831;
+  --nav-background: #393e46;
+}

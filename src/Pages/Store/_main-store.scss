@@ -1,0 +1,167 @@
+.main-store {
+  @include flex-layout(center, flex-start, column);
+  height: 100%;
+  margin: 3em 4%;
+  margin-right: 0;
+  padding: 1% 4%;
+  background-color: var(--nav-background);
+  border-radius: 15px;
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5 {
+    color: var(--header-light);
+  }
+}
+
+.navigator {
+  @include flex-layout(space-between, center, row);
+  width: 100%;
+  margin-top: 2em;
+}
+
+.items-filter {
+  padding: 0.5em 1em;
+  background-color: var(--header-background);
+  color: var(--header-light);
+  border: 0;
+  border-radius: 5px;
+  font-size: 0.95rem;
+  cursor: pointer;
+}
+
+.page-nav {
+  @include flex-layout(center, center, row);
+  width: 15em;
+  &-title {
+    margin: 0 5%;
+  }
+}
+
+.page-back,
+.page-forward {
+  background-color: var(--header-background);
+  width: 1.44em;
+  height: 1.44em;
+  border-radius: 5px;
+  flex-shrink: 0;
+  cursor: pointer;
+  transition: transform 0.3s ease-in;
+}
+
+.page-back:hover,
+.page-forward:hover {
+  transform: translateY(-1px);
+}
+
+.page-back::after {
+  @include page-arrows("\276E");
+}
+.page-forward::after {
+  @include page-arrows("\276F");
+}
+
+.item {
+  margin: 2%;
+}
+
+.item-container {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.item-container > * {
+  flex: 0 1 15rem;
+}
+
+.item-showcase {
+  height: 15rem;
+  background-color: wheat;
+  border-radius: 15px;
+}
+
+@media (min-width: 2500px) {
+  .store-page {
+    width: 50%;
+  }
+}
+
+// Breakpoint to max one item in a row
+
+@media (max-width: 1002px) {
+  .item-container {
+    justify-content: center;
+    margin-top: 10%;
+  }
+
+  .main-store {
+    padding: 1% 4%;
+  }
+
+  .page-nav {
+    justify-content: flex-end;
+
+    &-title {
+      display: none;
+    }
+  }
+
+  .page-forward,
+  .page-back {
+    width: 2.5rem;
+    height: 2.5rem;
+  }
+
+  .page-forward {
+    margin-left: 6%;
+  }
+}
+
+// Small mobile screens
+
+@media (max-width: 440px) {
+  .container {
+    max-width: 100%;
+  }
+
+  .main-store {
+    margin: 3em 0;
+  }
+
+  .item-container {
+    @include flex-layout(center, center, column);
+    padding: 1% 15%;
+  }
+
+  .navigator-top {
+    @include flex-layout(center, center, row);
+  }
+
+  .items-filter {
+    font-size: 1.1rem;
+    padding: 3% 5%;
+    background-color: var(--nav-background);
+    letter-spacing: 3px;
+  }
+
+  .page-nav-top {
+    display: none;
+  }
+
+  .navigator-bottom {
+    display: flex;
+    justify-content: flex-end;
+    margin-bottom: 5%;
+    opacity: 1;
+    pointer-events: all;
+    position: relative;
+  }
+}
+
+@media (max-width: 420px) {
+  .item-showcase {
+    height: 13.3rem;
+  }
+}

@@ -1,0 +1,34 @@
+.checkbox {
+  @include flex-layout(space-between, center, row);
+  width: 100%;
+  cursor: pointer;
+
+  &-input {
+    display: none;
+  }
+
+  &-box {
+    @include flex-layout(center, center, row);
+    width: 1em;
+    height: 1em;
+    border: 2px solid lightgrey;
+    flex-shrink: 0;
+    border-radius: 5px;
+    transition: all 0.18s ease-in;
+  }
+
+  &-box::after {
+    content: "\2714";
+    color: var(--header-light);
+    transform: scale(0);
+    transition: all 0.2s ease-in;
+  }
+
+  &-input:checked + &-box {
+    background-color: var(--header-background);
+    border-color: var(--header-background);
+  }
+  &-input:checked + &-box::after {
+    transform: scale(1);
+  }
+}

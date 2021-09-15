@@ -1,0 +1,19 @@
+//Store Navigators
+export const TRENDING_LIST = 'TRENDING_LIST';
+export const LOWEST_PRICE_LIST = 'LOWEST_PRICE_LIST';
+export const HIGHEST_PRICE_LIST = 'HIGHEST_PRICE_LIST';
+export const PAGE_FORWARD = 'PAGE_FORWARD';
+export const PAGE_BACK = 'PAGE_BACK';
+
+//Category Selector
+export const FOR_MEN = 'FOR_MEN';
+export const FOR_WOMEN = 'FOR_WOMEN';
+export const PRICE_RANGE = 'PRICE_RANGE';
+export const AUTOMATIC_MOVEMENT = 'AUTOMATIC_MOVEMENT';
+export const QUARTZ_MOVEMENT = 'QUARTZ_MOVEMENT';
+export const BRAND_BLONIE= 'BRAND_BLONIE';
+export const BRAND_BALTICUS = 'BRAND_BALTICUS';
+export const BRAND_CHRONOS_ART = 'BRAND_CHRONOS_ART';
+export const BRAND_GGERLACH = 'BRAND_GGERLACH';
+export const BRAND_LEONPROKOP = 'BRAND_LEONPROKOP';
+export const BRAND_VRATISLAVA = 'BRAND_VRATISLAVA';
